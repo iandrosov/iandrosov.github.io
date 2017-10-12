@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Working in Japan: What It is Like to Work in Appirio Tokyo Office
+title: Working in Japan - What It is Like to Work in Appirio Tokyo Office
 ---
 
 This blog is a recap of my days while working in Japan at Appirio Tokyo office. It is an intervew format with Nicole Klemp.
