@@ -9,6 +9,10 @@ Any great framework has flaws and Lightning no different. This problem appeared 
 
 We build a nice set of UI components that display a complex table of data that need a full-screen real-estate to display full table. I tested this as a tab in Lightning Record Page on the opportunity and it worked great as Lightning Component on Sales app. And on my large screen, it all shows nicely, job well done, maybe? We try to open this in a console where space is limited for main table display. Make it worse our screens at work are way smaller so data need to scroll resulted in really bad UX.
 
+we wanted to have this UX as shown on the image below
+
+![NodeMCU]({{ site.baseurl }}/images/lex/example-lex.png)
+
 We attempted to solve this by opening component as a subtab on a console as part of same Opportunity record and here is another problem - using app builder created a page very easy task, assuming it will be Lightning App Page we can open it as full screen but NOT. 
 
 * App Builder page builds flexipage metada
