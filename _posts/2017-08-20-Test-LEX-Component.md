@@ -3,7 +3,7 @@ layout: post
 title: Lightning Component Unit Test - System Error
 ---
 
-While working on Lightning components recently discovered that LEX APEX controllers are tricky to test. Mainly because of use `aura.redirect` or other `aura.` calls. If you try testing methods that use `aura.redirect` call you will get a System error like this,
+While working on Lightning components recently discovered that LEX APEX controllers are tricky to test. Mainly because of use `aura.redirect` or other `aura.` calls. If we try testing methods that use `aura.redirect` call we will get a System error like this,
 
 ```
 Internal Salesforce Error: 173417772-1404 (604027281) (604027281)
@@ -13,7 +13,7 @@ Anyways lets see how to resolve this issue with our test code.
 
 Digging bit deeper is WHY? Main reason for this error is `aura.<>` is a JavaScript frontend library, but here we are testing APEX controller back end that has to interface with front end JS library. Any such hybridization of programming languages can bring complex problems to light and I personally would avoid such transitions. 
 
-Fpr this example we have a custom Lightning Component that is mostly a copy of example `forgotPassword` found in any developer org. This component that performs a function to help users reset password. It has APEX Controller class like this one
+For this example we have a custom Lightning Component that is mostly a copy of example `forgotPassword` found in any developer org. This component that performs a function to help users reset password. It has APEX Controller class like this one
 
 ```
 global class LightningForgotPasswordController {
@@ -44,7 +44,7 @@ global class LightningForgotPasswordController {
 
 Simple one method that calls `forgotPassword` methods, checks user validity and redirects user to page with a message to check email and reset password.
 
-This method has following unit test code that tests this class ot provide code coverage.
+This method has following unit test code that tests this class to provide code coverage.
 
 ```
 @IsTest(SeeAllData = true)
@@ -80,7 +80,7 @@ When I run this type of unit test on my dev sandbox I got the interesting system
 Internal Salesforce Error: 173417772-1404 (604027281) (604027281)
 ```
 
-IMPORTANT fact if I use exact Salesforce example class and test that unit test will work. However, for some reason that test does NOT run/test `aura.redirect(checkEmailRef);` line of code it is ignored. But on my custom controller code it exevcuted this code and has an error.
+IMPORTANT fact if I use this exact Salesforce example class and run that unit test, it will work. However, for some reason that test does NOT run/test `aura.redirect(checkEmailRef);` line of code, it is ignored in Salesforce created class. But on my own custom controller code it executed this code and has an error.
 
 One simple way I found to avoid this error and provide effective test coverage is NOT to RUN `aura.redirect` during unit tests `Test.isRunningTest()`. This means making conditional code that is a bit ugly but in this case needed to move forward. Here is fixed code and unit test that worked.
 
