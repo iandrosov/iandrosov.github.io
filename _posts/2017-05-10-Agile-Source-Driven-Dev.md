@@ -3,17 +3,17 @@ layout: post
 title: Empower Salesforce Team to run Agile with Continuous Delivery
 ---
 
-Continuous Delivery and CI with Salesforce is one problem I have thougt about for some time. Source driven development with source controll is central to CD/CI process. Salesforce for a long time had been doing ORG centric development, based on Production org. On Many Salesforce projects I was able to use source control but it was sort of a crutch used to back up source rather than doing CI. Recently new DX (Pilot) tool been getting more attention as a solution to change a flow to Source and repository based developmnet however, for now real production deployments mostly done with ANT or Change Sets.
+Continuous Delivery and CI with Salesforce is one problem I have thougt about for some time. Source driven development with source controll is central to CI/CD process. Salesforce for a long time had been doing ORG centric development, based on Production org. On Many Salesforce projects I was able to use source control but it was sort of a crutch used to back up source rather than doing CI. Recently new DX tools been getting more attention as a solution to change a flow to Source and repository based developmnet however, for now real production deployments are still done with ANT or Change Sets.
 
 In our team we have various skill sets but not everyone has command line skills. Typical developers are good with CLI tools for git, heroku or sfdx CLIs. But how about Admins or Declaratove Developer who making customizations to models or process?
 
-To include everyone to run development through github I had to create a deployment tool simple enough for anyone to use that did not require lots of diverse skills on git CLI or ant scrcipts or shell scripts.
+To include everyone to run development through source control (GitHub) I had to create a deployment tool simple enough for anyone to use that did not require lots of diverse skills on git CLI or ant scrcipts or shell scripts.
 
 Started this project a while back on GitHub [sf-deploy-tool](https://github.com/iandrosov/sf-agile-deploy) project. Here is my solution
 
-Using [Agile Accelerator](https://appexchange.salesforce.com/listingDetail?listingId=a0N30000000ps3jEAA) package make it simple to run Agile Sprints and allows for many UI customization and keeping it all in Salesforcce. Our team was used to work on AA Stories with Agile tool.
+Using [Agile Accelerator](https://appexchange.salesforce.com/listingDetail?listingId=a0N30000000ps3jEAA) package make it simple to run Agile Sprints and allows for many UI customization and keeping it all in Salesforcce. Our team was used to work on Agile Accelerator Stories with Agile tool.
 
-I created a new Story View - Visual Force page to list out all current Sprint stories as Work Items in Agile Accelrator. Ideally I wanted to customize existing Work Item detail page but in Classic it is a Managed package VFP no way to modify it. In Lightning we are able to deploy direct from custom button action on Work Item because it uses standard page layouts. Code found on GitHub [sf-agile-deploy-pkg](https://github.com/iandrosov/sf-agile-deploy-pkg)
+I created a new Story View - Visual Force page to list out all current Sprint stories as Work Items in Agile Accelerator. Ideally I wanted to customize existing Work Item detail page but in Classic it is a Managed package VFP no way to modify it. In Lightning we are able to deploy direct from custom button action on Work Item because it uses standard page layouts. Code found on GitHub [sf-agile-deploy-pkg](https://github.com/iandrosov/sf-agile-deploy-pkg)
 
 Next I needed a service to pull metadata and commit source to git repository. Build a good old Java [Spring-Boot](https://projects.spring.io/spring-boot/) app with REST services to program all needed actions.
 I selected Java mainly for easy integration to other tool libraries such as [Apache ANT](http://ant.apache.org/) and [Jgit](https://www.eclipse.org/jgit/) to manage deployments.
