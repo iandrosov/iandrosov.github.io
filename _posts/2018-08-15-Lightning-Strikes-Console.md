@@ -3,11 +3,11 @@ layout: post
 title: Lightning Strikes the Service Console
 ---
 
-I have been working in Lightning and building Components for a couple of years now. Lightning is a great platform to work with, finally, we can work in JS and build manageable units of work as components that can assemble complex apps. This was hard and clunky before with just JavaScript/CSS framework, require lots of work and skills that normally not available on projects. 
+I have been working in Lightning and building Components for a couple of years now. Lightning is a great platform to work with, finally, we can work in JS and build atomic units of work as components that can be assembled into complex apps. This was hard and clunky before with just JavaScript/CSS frameworks, require lots of work and skills that normally not available on projects. 
 
-Any great framework has flaws and Lightning no different. This problem appeared as was trying to open a component as subtab in a console app. Things work differently in the console as you may know from Service Cloud.
+Any great framework has flaws and Lightning no different. This problem appeared as I was trying to open a component as subtab in a console app. Things work differently in the console as you may know from Service Cloud.
 
-We build a nice set of UI components that display a complex table of data that need a full-screen real-estate to display full table. I tested this as a tab in Lightning Record Page on the opportunity and it worked great as Lightning Component on Sales app. And on my large screen, it all shows nicely, job well done, maybe? We try to open this in a console where space is limited for main table display. Make it worse our screens at work are way smaller so data need to scroll resulted in really bad UX.
+We build a nice set of UI components that display a complex table of data that need a full-screen real-estate to display full table. I tested this as a tab in Lightning Record Page on the Opportunity record and it worked great as Lightning Component on Sales app. And on my large screen, it all shows nicely, job well done, maybe? We try to open this in a console where space is limited for main table display. To make things worse our screens at work are way smaller so data needed to scroll, this resulted in really bad UX.
 
 we wanted to have this UX as shown on the image below
 
