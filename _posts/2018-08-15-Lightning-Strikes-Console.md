@@ -21,7 +21,7 @@ We attempted to solve this by opening component as a subtab on a console as part
 * Result - compnent cannot initialize data
 
 #### Some try-error fun
-I did several attempts to launch component form various places, button component, quick action, Aura app, nothing seem to work right. While it is possible to pass parameters to aura:app it was not working in navigation inside a console. Finally reached out to support and after few weeks finally, git some great insights that helped to open a component as a subtab in Lightning Console.
+I did several attempts to launch component from various places, button component, quick action, Aura app, nothing seem to get to desired UX result. While it is possible to pass parameters to aura:app it was not working in navigation inside a console. Finally reached out to support and after few weeks finally, have some great insights that helped to open a component as a subtab in Lightning Console.
 
 This is good resource working with console [Salesforce Console Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.api_console.meta/api_console/sforce_api_console_lightning_openSubtab.htm) has some examples for workspace tabs, subtabs and icons.
 
