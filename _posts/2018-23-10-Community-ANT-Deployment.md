@@ -12,7 +12,8 @@ We start with existing community we already built with all configs, pages, and L
 
 ### Extract Communities Metadata
 
-We need to make a `package.xml` file for this and not much documentation available on this so I created this GHithub repository for myself as reminder add this here.
+We need to make a `package.xml` file for this and no full set of documentation was available on metadata utems until Smmer 18 [Metadata Cverage Report](https://developer.salesforce.com/docs/metadata-coverage/44) that help with APIs but not for package ANT deployments. I created this GitHub repository [sf-metadata-pkg]() for myself as reminder may be it will be useful reference. 
+
 Our community may consist of many diferent metadata artifacts, VF Pages, Configs settings, Ligtning Components, APEX classes and other things. Metadata for APEX code, Lightning `aura` components are well documneted and known to most develpers.
 Note here we are dealing with new API Version 44.00 Winter 19 for `ant.salesforce.jar`
 
