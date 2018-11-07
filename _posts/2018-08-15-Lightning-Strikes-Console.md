@@ -2,6 +2,7 @@
 layout: post
 title: Lightning Strikes the Service Console
 ---
+2018-08-15
 
 I have been working in Lightning and building Components for a couple of years now. Lightning is a great platform to work with, finally, we can work in JS and build atomic units of work as components that can be assembled into complex apps. This was hard and clunky before with just JavaScript/CSS frameworks, require lots of work and skills that normally not available on projects. 
 
