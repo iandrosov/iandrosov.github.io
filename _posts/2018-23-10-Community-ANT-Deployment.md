@@ -12,7 +12,7 @@ We start with existing community we already built with all configs, pages, and L
 
 ### Extract Communities Metadata
 
-We need to make a `package.xml` file for this and not much documentation available on this so I add this here
+We need to make a `package.xml` file for this and not much documentation available on this so I created this GHithub repository for myself as reminder add this here.
 Our community may consist of many diferent metadata artifacts, VF Pages, Configs settings, Ligtning Components, APEX classes and other things. Metadata for APEX code, Lightning `aura` components are well documneted and known to most develpers.
 Note here we are dealing with new API Version 44.00 Winter 19 for `ant.salesforce.jar`
 
