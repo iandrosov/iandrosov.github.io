@@ -2,9 +2,8 @@
 layout: post
 title: Deploy Salesforce Communities via ANT Migration Tool
 ---
-Update 10/23/2018
 
-If you recently worked with Salesforce Communities it is not easy to deploy or move to different environments. Here we will show how to use ANT script to deploy Community and manage source in GitHub.
+If you recently worked with Salesforce Communities it is not easy to deploy or move to different environments. Here we will show how to use ANT script and Metadata API to deploy Communities and manage source in GitHub. This an updated blog for Summer 18 & Winter 19 releases as of 10/23/2018.
 
 Based on what I learned from Salesforce one reason it is not easy to deploy Community is its design. Communities Team initially expected Enterprises will be making changes and building Community direct in Production and then move it to sanboxes using refresh sandbox feature. Going down from PROD to other QA/UAT environment distribution model. The Production org is expected as source of trueth. However, reality of develpment is most processes start in DEV sandbox and expected to move through multiple test stages like QA, UAT, and then PROD. Understandig this requirements Salesforce is working to change the initial idea and make community more source driven  with metadata and DX. That is a need that has been recognized and hopefully is comming in some later releases.
 
