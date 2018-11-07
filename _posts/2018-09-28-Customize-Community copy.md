@@ -2,9 +2,9 @@
 layout: post
 title: Tips to Customize Communities
 ---
-2018-08-15
+2018-09-28
 
-Quick update since Summer 18 number of improvements had been made to Community Branding and some of the items noted here now can be edited via UI in Builder settings. The CSS may still be useful but for compatibility it is best to use available system features.
+Quick update since Summer 18 & Winter 19 number of improvements had been made to Community Branding and some of the items noted here now can be edited via UI in Builder settings. The CSS may still be useful but for compatibility it is best to use available system features.
 
 If you recently worked with Salesforce Communities you may have noticed some simple things not easy to customize. Example be trying ot remove global search or notification from your pages is not possible without hack of some code. Here I try to collect various tips on how to get those details done and blaze new trails in your Community.
 
