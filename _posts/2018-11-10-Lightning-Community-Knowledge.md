@@ -3,24 +3,24 @@ layout: post
 title: Edit Knowledge in Salesforce Communities
 ---
 
-Salesforce Communities has extended many freatures in recent releases, including new branding sets, themes and audiences. We had a need to open Knowledeg to Comunity uesrs that is a standard out of box feature. Most Community types can view and search Knowledge articles for self service. 
+Salesforce Communities has extended many features in recent releases, including new branding sets, themes, and audiences. We had a need to open Knowledge to Comunity users that is a standard out of box feature. Most Community types can view and search Knowledge articles for self-service. 
 
-How about edit or contribute an article in Lightning Community? As it turned out as always all in the details, editing Knowledge in Lighting Community is not fully supported and requires development. While it is possible to use standard Knowledge editor for Community built with VisualForce and Tabs, there is no Edit/Author option for Cummunity Builder pages and Lightning.
+How about editing or contribute an article in Lightning Community? As it turned out as always all in the details, editing Knowledge in Lighting Community is not fully supported and requires development. While it is possible to use standard Knowledge editor for Community built with VisualForce and Tabs, there is no Edit/Author option for Community Builder pages and Lightning.
 
-This article post will explore that topic, how to build Lightning Component to edit Knowledge articles in Lightning Community. I was expecting this would be solved already but after searching in documentation, samples or GitHub there was no soluition created yet, and Knowledge documentation is a bit sparse on the subject, especially for Lightning Knowledge.
+This article post will explore that topic, how to build Lightning Component to edit Knowledge articles in Lightning Community. I was expecting this would be solved already but after searching in the documentation, samples or GitHub there was no solution created yet, and Knowledge documentation is a bit sparse on the subject, especially for Lightning Knowledge.
 
 ### Lightning Knowledge
 
-Salesforce Knowledge in Lightning has changed the data model behind the scenes. In classic there were sets of Knowledge custom objects created for each Article type.
+Salesforce Knowledge in Lightning has changed the data model behind the scenes. In classic, there were sets of Knowledge custom objects created for each Article type.
 If we create a new article type that = building a new Custom Object in Salesforce with new fields and permissions.
 
-Lightning changed all that to use single Object `Knowledge__kav` and Record Types as new article types. I am guessing `_kav` stands for KNowledge Article Version. It becomming more clear now why that model change causes issues and makes Knowledge transit to Lightning bit harder than it should be.
+Lightning changed all that to use single Object `Knowledge__kav` and Record Types as new article types. I am guessing `_kav` stands for KNowledge Article Version. It becoming more clear now why that model change causes issues and makes Knowledge transition to a Lightning bit harder than it should be.
 
 ### Knowledge in Community
 
-Comunity Builder provides many standard components to view Knowledge, Topics and articlse search. This post will focus on building a component to edit an article.
+Community Builder provides many standard components to view Knowledge, Topics and articles search. This post will focus on building a component to edit an article.
 
-To edit text we will use [Base Lightning Component](https://developer.salesforce.com/docs/component-library/overview/components) RichText component to view or edit actual text 
+To edit text we will use [Base Lightning Component](https://developer.salesforce.com/docs/component-library/overview/components) RichText component to view or edit the actual text 
 
 * Edit `lightning:inputRichText`
 * View `ightning:formattedRichText`
@@ -58,7 +58,7 @@ Component client JavaScript controller
 ```
 
 ### Access Knowledge via REST API
-To edit edit a Knowledge article we need to first create and then find the article and load its content using the REST API. For this example we create 2 test articles and single category called `Policy`, in real production there can be a complex web of categories and related articles.
+To edit a Knowledge article we need to first create and then find the article and load its content using the REST API. For this example, we create 2 test articles and a single category called `Policy`, in real production there can be a complex web of categories and related articles.
 
 For REST API Documentation can be found at [Salesforce Knowledge Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.knowledge_dev.meta/knowledge_dev/knowledge_REST_retrieve_article_version.htm). To query article data we can use [WorkBench](https://workbench.developerforce.com) and run SOQL query to find article IDs
 
@@ -83,7 +83,7 @@ SELECT Id,KnowledgeArticleId,Summary,Title FROM KnowledgeArticleVersion
 
 ```
 
-Now we can try Knowledge Management REST API to get article content so we can load text into our component. This api will return an Article record by ID
+Now we can try Knowledge Management REST API to get article content so we can load text into our component. This API will return an Article record by ID
 
 ```
 /services/data/v44.0/knowledgeManagement/articles/kA0J00000005859KAA
@@ -106,7 +106,7 @@ masterLanguage: en_US
 onlineArticleMasterVersionId: ka0J00000005YlFIAU
 ```
 
-As you see this returened an article metadata and importantly a URL to next call to get actuall article data. We will call that next.
+As you see this returned an article metadata and importantly a URL to next call to get actual article data. We will call that next.
 
 ```
 /services/data/v44.0/knowledgeManagement/articleVersions/masterVersions/ka0J00000005YlFIAU
@@ -138,9 +138,8 @@ publishStatus: Online
 versionNumber: 1
 
 ```
-Now we got our cotent to load and edit as part of JSON response. In this case it is Summary field with text that can be edited. Knowledge object can carry custom fields for text content as well.
-In this case we are working with Lightning Components that will be hosted in Community pages. Salesforce Lightning can’t make calls to third-party APIs from client-side code. To get our content we will use APEX controller to load/edit data we need for Knowledge article.
-
+Now we got our content to load and edit as part of JSON response. In this case, it is a Summary field with text that can be edited. Knowledge object can carry custom fields for text content as well.
+In this case, we are working with Lightning Components that will be hosted in Community pages. Salesforce Lightning can’t make calls to third-party APIs from client-side code. To get our content we will use APEX controller to load/edit data we need for Knowledge article.
 
 
 
