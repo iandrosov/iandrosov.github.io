@@ -166,4 +166,4 @@ Open serial monitor window `Tools > Serial Monitor` and upload this code to Node
 
 Open browser and type URL `http://192.168.1.12/on` will turn LED light up with blue light. Similar URL `http://192.168.1.12/off` will switch LED off.
 
-Now lets summ our acomplishments, so far we set up our development system with Arduino IDE for NodeMCU, connected our IoT device and tested it, made connection to our WiFi notwork and started to control NodeMCU from our browser. Very good starting point for IoT development. In the next post will explore how to collect some data and send this to our Cloud API server  [Part 3]() - Sensors with NodeMCU.
+Now lets summ our acomplishments, so far we set up our development system with Arduino IDE for NodeMCU, connected our IoT device and tested it, made connection to our WiFi notwork and started to control NodeMCU from our browser. Very good starting point for IoT development. In the next post will explore how to collect some data and send this to our Cloud API server  [Part 3](http://iandrosov.github.io/IoT-NodeMCU-Heroku-Part3/) - Sensors with NodeMCU.
