@@ -9,7 +9,7 @@ Technical Architect after a quarter-century in this industry still coding my way
 ### More Information
 
 This blog name was inspired by an old film "[7 Years in Tibet](https://en.wikipedia.org/wiki/Seven_Years_in_Tibet_(1997_film))" like a film's character a remarkable adventure
-of a man transformed by his experiences. I traded my hardware centered programming career for the cloud 10 years ago, when I started to work with Salesforce.com, AWS, Google, and all things Mobile. Hmm, It has been 10 years to reflect on this journey.
+of a man transformed by his experiences. I traded my hardware centered programming career for the cloud over 10 years ago, when I started to work with Salesforce.com, AWS, Google, and all things Mobile. Hmm, It has been 10 years to reflect on this journey.
 
 It continues to be a transformational journey filled with learning experiences. On this Cloudy path, I visited many places, 
 Salesforce, Force.com, Amazon Web Service, Google, Heroku, and Mobile iOS apps, and I hope that this will continue to be a 
