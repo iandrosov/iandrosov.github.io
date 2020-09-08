@@ -2,7 +2,7 @@
 layout: post
 title: Salesforce APEX Trigger Callout Chaining
 ---
-[日本語](http://iandrosov.github.io/2017-09-10-Trigger-Callout-Chain-JP/)
+[日本語](http://iandrosov.github.io/2020-09-10-Trigger-Callout-Chain-JP/)
 
 I recently faced a challenge with Salesforce limits. I needed to make a chained callout from Apex Trigger that is typically not possible. Any callouts from APEX triggers are restricted, only possible with `@future` method calls that are limited to 10 calls per transaction.
 
