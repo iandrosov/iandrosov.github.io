@@ -2,7 +2,7 @@
 layout: post
 title: Salesforce APEX トリガーコールアウトチェーン
 ---
-[English](http://iandrosov.github.io/2017-09-10-Trigger-Callout-Chain/)
+[English](http://iandrosov.github.io/Trigger-Callout-Chain/)
 
 私は最近、Salesforceの制限で課題に直面しました。通常は不可能なApexトリガーからのチェーンコールアウトを行う必要がありました。APEXトリガーからのコールアウトはすべて制限されており、トランザクションごとに10回までの呼び出しに制限されている `@future` メソッド呼び出しでしかできません。
 
