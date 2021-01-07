@@ -2,6 +2,8 @@
 layout: post
 title: Create Hybrid iOS App Scanner plugin
 ---
+This is an example of integrating hardware scanner device with Hybrid iOS application using PhneGap Cordova library.
+Source code is available in GitHub repository [haloscanner](https://github.com/iandrosov/haloscanner)
 
 Download the [cordova](http://cordova.apache.org/) 3.3.0
 Install the Cordova cli tools from command line in cordova directory cordova-3.3.0
@@ -19,7 +21,7 @@ This command sets up new directory haloscanner and places cordova JS files
 
 `$ cd haloscanner`
 
-No we need to add target platform to our new project to be able to build for iOS, Android etc. We will add iOS only for now.
+Now we need to add target platform to our new project to be able to build for iOS, Android etc. We will add iOS only for now.
 
 `$ cordova platform add ios`
 
